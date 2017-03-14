@@ -1,8 +1,8 @@
 
 .section .data 
 
-a: .quad 0x5
-b: .quad 0x999999999
+b: .quad 0x5
+a: .quad 0x999999999
 
 res: .quad 0 
 
@@ -17,7 +17,7 @@ main:
 	adcl %ebx,res+4
 	sub $1,b
 	sbb $0,b+4
-	cmp $0,b
+	cmpl $0,b
 	je cond1
 	jmp main
 cond1:
